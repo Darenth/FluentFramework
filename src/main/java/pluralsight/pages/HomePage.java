@@ -7,7 +7,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
 public class HomePage extends BasePage {
-    public void search(String searchValue) {
+    private HomePage() {
+    }
+
+    public static HomePage getHomePage(){
+        return new HomePage();
+    }
+
+    public HomePage search(String searchValue) {
         WebElement searchButton = driver.findElement(By.className("ps-nav--primary"));
         searchButton.click();
         wait.until(
@@ -18,7 +25,7 @@ public class HomePage extends BasePage {
         search.sendKeys(Keys.ENTER);
         WebElement results = driver.findElement(By.className("show-for-medium-up"));
         wait.until(ExpectedConditions.visibilityOf(results));
-
+        return this;
 
     }
 }
