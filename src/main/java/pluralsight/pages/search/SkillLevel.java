@@ -1,16 +1,16 @@
 package pluralsight.pages.search;
 
 public enum SkillLevel {
-    BEGINNER("Beginner"),INTERMEDIATE("Intermediate"),ADVANCED("Advanced");
+    BEGINNER("Beginner"), INTERMEDIATE("Intermediate"), ADVANCED("Advanced");
 
-    private  String level;
+    private String level;
 
-    SkillLevel(String level){
-        this.level=level;
+    SkillLevel(String level) {
+        this.level = level;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return level;
     }
 }

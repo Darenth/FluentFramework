@@ -9,10 +9,12 @@ import static pluralsight.DriverFactory.getChromeDriver;
 import static pluralsight.DriverFactory.getWebDriverWait;
 
 public class BasePage {
+
     protected WebDriver driver = getChromeDriver();
     protected WebDriverWait wait = getWebDriverWait();
 
-    public BasePage veryfiIsDisplayed(By element) {
+
+    public BasePage verifyIsDisplayed(By element){
         Assert.assertTrue(driver.findElement(element).isDisplayed());
         return this;
     }
